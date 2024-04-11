@@ -23,6 +23,7 @@ struct, switch,
 typedef, typeof @__,
 thread __thread _Thread_local
 (CTokUInt128) __uint128 __uint128_t,
+(CTokF32x4) __f32x4 __f32x4_t,
 union,
 unsigned,
 void,

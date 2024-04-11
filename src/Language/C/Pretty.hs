@@ -257,6 +257,7 @@ instance Pretty CTypeSpec where
     pretty (CComplexType _)     = text "_Complex"
     pretty (CInt128Type _)      = text "__int128"
     pretty (CUInt128Type _)     = text "__uint128"
+    pretty (CF32x4Type _)       = text "__f32x4"
     pretty (CSUType union _)    = pretty union
     pretty (CEnumType enum _)   = pretty enum
     pretty (CTypeDef ident _)   = identP ident

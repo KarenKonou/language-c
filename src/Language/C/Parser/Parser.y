@@ -237,6 +237,8 @@ typeof		{ CTokTypeof	_ }
 union		{ CTokUnion	_ }
 "__uint128"     { CTokUInt128   _ }
 "__uint128_t"   { CTokUInt128   _ }
+"__f32x4"       { CTokF32x4     _ }
+"__f32x4_t"     { CTokF32x4     _ }
 unsigned	{ CTokUnsigned	_ }
 void		{ CTokVoid	_ }
 volatile	{ CTokVolatile	_ }
@@ -897,6 +899,7 @@ basic_type_name
   | "_Complex"			{% withNodeInfo $1 $ CComplexType }
   | "__int128"                  {% withNodeInfo $1 $ CInt128Type }
   | "__uint128"                 {% withNodeInfo $1 $ CUInt128Type }
+  | "__f32x4"                   {% withNodeInfo $1 $ CF32x4Type }
   | "_Float32"                  {% withNodeInfo $1 $ (CFloatNType 32 False) }
   | "_Float32x"                 {% withNodeInfo $1 $ (CFloatNType 32 True) }
   | "_Float64"                  {% withNodeInfo $1 $ (CFloatNType 64 False) }
